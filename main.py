@@ -75,9 +75,9 @@ def send_email(body):
         server_ssl = smtplib.SMTP_SSL("smtp.gmail.com", 465)
         server_ssl.ehlo()
 
-        SENDER_EMAIL = "bytenull66@gmail.com"
-        RECEIVER_EMAIL = "bytenull66@gmail.com"
-        SENDER_PASSWORD = "manofsteel"
+        SENDER_EMAIL = os.getenv("SENDER_EMAIL")
+        RECEIVER_EMAIL = os.getenv("SENDER_EMAIL")
+        SENDER_PASSWORD = os.getenv("SENDER_PASSWORD")
 
         subject = "YouTube Trending Videos"
 
